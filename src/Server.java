@@ -114,7 +114,7 @@ public class Server implements Runnable{
                                         if(op==1){
                                             out.println("Enter ammount:");
                                             double amt=Double.parseDouble(in.readLine());
-                                            stm.executeUpdate("update Customer set balance="+amt+" where acnum="+rs.getInt("acnum"));
+                                            stm.executeUpdate("update Customer set balance="+(rs.getDouble("balance")+amt)+" where acnum="+rs.getInt("acnum"));
                                         }
                                         else if(op==2){
                                             out.println("Enter ammount:");
