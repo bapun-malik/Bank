@@ -28,7 +28,7 @@ public class Server implements Runnable{
                 pool.execute(handler);
             }
         }catch(Exception e){
-            System.out.println("Port is busy");
+            System.out.println("Server is busy");
         }
     }
     class ClientHandler extends Thread{
